@@ -1,0 +1,66 @@
+.chart[data-v-09057c] {
+  margin: 10px auto;
+  width: 800px;
+  min-height: 500px;
+  max-height: 600px;
+}
+.chart #content[data-v-09057c] {
+  max-height: 550px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  line-height: 22px;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+}
+.chart #content[data-v-09057c]::-webkit-scrollbar {
+  display: none;
+}
+.chart #content .content-item[data-v-09057c] {
+  min-height: 10px;
+  clear: both;
+}
+.chart #content .joined[data-v-09057c] {
+  text-align: center;
+  color: #ccc;
+  font-size: 13px;
+  margin: 5px;
+}
+.chart #content .msg[data-v-09057c] {
+  margin: 0px 0;
+  display: inline-block;
+  min-width: 10px;
+}
+.chart #content .msg p[data-v-09057c] {
+  margin: 5px 0;
+  word-break: break-all;
+  font-size: 12px;
+}
+.chart #content .msg .p1[data-v-09057c] {
+  color: #999;
+  font-size: 12px;
+}
+.chart #content .msg .p2[data-v-09057c] {
+  background: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: inline-block;
+}
+.chart #content .msg.right[data-v-09057c] {
+  float: right;
+  clear: both;
+}
+.chart #content .msg.right .p1[data-v-09057c] {
+  text-align: right;
+}
+.chart #content .msg.right .p2[data-v-09057c] {
+  background: #5fb878;
+  text-align: right;
+  float: right;
+  color: #fff;
+}
+.chart .send[data-v-09057c] {
+  margin-top: 10px;
+}
+
