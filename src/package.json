@@ -1,18 +1,14 @@
 {
-  "name": "fis-static",
+  "name": "static",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev-admin": "cross-env NODE_ENV=development&&export OBJ_ENV=dev&&node dev-admin.js",
-    "release-admin": "export NODE_ENV=production&&export OBJ_ENV=pro&&rm -ifr ../dist/admin&& node dev-admin.js",
-    "dev-home-win": "set NODE_ENV=development&&set OBJ_ENV=dev&&node dev-home.js",
-    "dev-home": "cross-env-shell NODE_ENV=development export OBJ_ENV=dev node dev-home.js",
-    "release-home": "export NODE_ENV=production&&export OBJ_ENV=pro&&rm -ifr ../dist/home&& node dev-home.js",
-    "release-home-win": "set NODE_ENV=production&&set OBJ_ENV=pro&&rm -ifr ../dist/home&& node dev-home.js",
-    "dev-touch-win": "set NODE_ENV=development&&set OBJ_ENV=dev&&node parcel-touch.js",
-    "dev-touch": "export NODE_ENV=development&&export OBJ_ENV=dev&&node parcel-touch.js",
-    "release-touch": "export NODE_ENV=production&&export OBJ_ENV=pro&&rm -ifr ../dist/touch&& node parcel-touch.js",
-    "release-touch-win": "set NODE_ENV=production&&set OBJ_ENV=pro&&rm -ifr ../dist/touch&& node parcel-touch.js"
+    "dev-admin": "cross-env NODE_ENV=development OBJ_ENV=dev node dev-admin.js",
+    "release-admin": "rm -ifr ../dist/admin&&cross-env NODE_ENV=production OBJ_ENV=pro node dev-admin.js",
+    "dev-home": "cross-env NODE_ENV=development OBJ_ENV=dev node ./dev-home.js",
+    "release-home": "rm -ifr ../dist/home&&cross-env NODE_ENV=production OBJ_ENV=pro  node dev-home.js",
+    "dev-touch": "cross-env NODE_ENV=development OBJ_ENV=dev node parcel-touch.js",
+    "release-touch": "rm -ifr ../dist/touch&&cross-env NODE_ENV=production OBJ_ENV=pro node parcel-touch.js"
   },
   "author": "",
   "license": "ISC",
