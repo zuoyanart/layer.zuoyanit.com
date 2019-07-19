@@ -4,7 +4,6 @@ module.exports = {
     "node": true
   },
   "extends": [
-    "think",
     "standard",
     "plugin:vue/base"
   ],

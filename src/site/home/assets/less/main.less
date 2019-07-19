@@ -10,45 +10,58 @@
 @import './var.less';
 @import '../../../../assets/less/mixin.less';
 
+.markdown-body {
+    margin: 20px 0;
+}
+
 .header-menu {
     width: 100%;
-    height: 60px;
-    background: linear-gradient(to right, #6041bf, #6076f3);
+    height: 382px;
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+
 
     .header-menu-c {
-        position: relative;
+        padding: 100px 0;
         width: @body-width;
         height: 100%;
         margin: 0 auto;
-        display: flex;
-        color: #ccc;
 
-        .base-mainmenu {
-            flex: 1;
+        h1 {
+            font-size: 52px;
         }
 
-        .lianxi {
+        h2 {
             font-size: 20px;
-            line-height: 60px;
+            opacity: 0.7;
+            margin: 16px 0 32px 0;
         }
-    }
-}
 
-.item-gap {
-    width: 100%;
-    height: 126px;
-    border-top: 1px solid #d0d0d0;
-    border-bottom: 1px solid #d0d0d0;
-    background-color: #F4F4F4;
-    text-align: center;
-    color: #4c4c4c;
+        &>a {
+            font-size: 16px;
+            display: inline-block;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: color 0.2s,
+                background-color 0.2s,
+                border-color 0.2s;
+            padding: 12px 16px;
+            color: rgba(255, 255, 255, 0.8);
 
-    h2 {
-        margin-top: 36px;
-    }
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
 
-    p {
-        font-size: 12px;
+        .shields {
+            margin: 30px 0;
+
+            a {
+                margin: 0 5px;
+            }
+        }
     }
 }
 
@@ -56,6 +69,34 @@
     clear: both;
     width: 100%;
     min-height: 100px;
+}
+
+.layerindex {
+    width: @body-width;
+    min-height: 100px;
+    margin: 0 auto;
+    padding: 100px 0px;
+
+    .h1-header {
+        color: #159957;
+        font-weight: normal;
+        font-size: 32px;
+        margin: 32px 0 16px 0;
+    }
+
+    .h2-header {
+        color: #159957;
+        font-weight: normal;
+        font-size: 26px;
+        margin: 32px 0 16px 0;
+    }
+
+    .h3-header {
+        color: #159957;
+        font-weight: normal;
+        font-size: 20px;
+        margin: 32px 0 16px 0;
+    }
 }
 
 .footer {

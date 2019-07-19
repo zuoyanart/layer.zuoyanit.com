@@ -6,34 +6,44 @@
   <div>
     <div class="header-menu">
       <div class="header-menu-c">
-        <!-- <img src="../assets/img/site/logo.png" style="margin-right:50px;"> -->
-        <el-menu
-          class="el-menu-demo"
-          mode="horizontal"
-          background-color="transparent"
-          text-color="#fff"
-          :router="true"
-          active-text-color="#ffd04b"
-        >
-          <el-menu-item index="/" :exact="true">首页</el-menu-item>
-          <el-menu-item index="/chart">在线聊天</el-menu-item>
-          <el-menu-item>
-            <a href="/doc" target="_blank">文档</a>
-          </el-menu-item>
-          <el-menu-item>
-            <a href="https://github.com/zydeasy/deasy-qa/issues" target="_blank">问题工单</a>
-          </el-menu-item>
-        </el-menu>
-        <el-menu
-          class="el-menu-demo1"
-          mode="horizontal"
-          background-color="transparent"
-          text-color="#fff"
-          :router="true"
-        >
-          <el-menu-item index="/reg">注册</el-menu-item>
-          <el-menu-item index="/login">登录</el-menu-item>
-        </el-menu>
+        <h1>vue-layer</h1>
+        <h2>精简，灵活的web pc弹窗组件</h2>
+        <a href="https://github.com/zuoyanart/vue-layer" target="_blank">View on GitHub</a>
+        <a href="https://www.zuoyanit.com" target="_blank">开发者基础服务平台</a>
+        <div class="shields">
+          <a href="https://www.npmjs.com/package/vue-layer" rel="nofollow" target="_blank">
+            <img
+              src="https://camo.githubusercontent.com/5529516c2cfe21df593ddb78ddf1393dc09c1336/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64772f7675652d6c617965722e7376673f7374796c653d666c61742d737175617265"
+              alt="npm"
+              data-canonical-src="https://img.shields.io/npm/dw/vue-layer.svg?style=flat-square"
+              style="max-width:100%;"
+            />
+          </a>
+          <a href="https://www.npmjs.com/package/vue-layer" rel="nofollow" target="_blank">
+            <img
+              src="https://camo.githubusercontent.com/eedae8dc255e8b48c3316b253fbaac02f3fe5774/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f7675652d6c617965722e737667"
+              alt="npm"
+              data-canonical-src="https://img.shields.io/bundlephobia/minzip/vue-layer.svg"
+              style="max-width:100%;"
+            />
+          </a>
+          <a href="https://www.npmjs.com/package/vue-layer" rel="nofollow" target="_blank">
+            <img
+              src="https://camo.githubusercontent.com/a9a733c1224746790cd0fb04fa8f370d3fcfd3e1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f7061636b6167652d6a736f6e2f762f7a756f79616e6172742f7675652d6c617965722e737667"
+              alt="npm"
+              data-canonical-src="https://img.shields.io/github/package-json/v/zuoyanart/vue-layer.svg"
+              style="max-width:100%;"
+            />
+          </a>
+          <a href="https://www.npmjs.com/package/vue-layer" rel="nofollow" target="_blank">
+            <img
+              src="https://camo.githubusercontent.com/dd773d72f412784f5926fe3050065e6fc8ad72ef/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f7675652d6c617965722e737667"
+              alt="npm"
+              data-canonical-src="https://img.shields.io/npm/l/vue-layer.svg"
+              style="max-width:100%;"
+            />
+          </a>
+        </div>
       </div>
     </div>
     <router-view></router-view>
@@ -44,10 +54,7 @@
             <h3>资源</h3>
             <ul>
               <li>
-                <a href="/doc" target="_blank">开发文档</a>
-              </li>
-              <li>
-                <a href="http://www.zuoyanit.com/doc/serversdk.html">SDK下载</a>
+                <a href="https://github.com/zuoyanart" target="_blank">GitHub</a>
               </li>
             </ul>
           </div>
@@ -55,38 +62,30 @@
             <h3>服务支持</h3>
             <ul>
               <li>
-                <a href="https://github.com/zydeasy/deasy-qa/issues">问题咨询</a>
+                <a href="https://github.com/zuoyanart/vue-layer/issues" target="_blank">问题咨询</a>
               </li>
             </ul>
           </div>
           <div class="part">
-            <h3>联系我们</h3>
+            <h3>联系左盐</h3>
             <ul>
-              <li>电话：15537172119</li>
-              <li>邮箱：deasy@zuoyanit.com</li>
-              <li>地址：河南省郑州市美盛中心</li>
+              <li>邮箱：huabinglan@163.com</li>
             </ul>
           </div>
-          <img src="../assets/img/wx.jpg" alt style="width:150px;height:150px;">
-        </div>
-        <div class="bottom">
-          <a href="javascript:void(0);">友情链接&nbsp;&nbsp; |</a>
-          <a href="http://news.163.com" target="_blank">网易</a>
-          <a href="http://www.miitbeian.gov.cn" target="_blank">网易</a>
-          <a href="http://www.miitbeian.gov.cn" target="_blank">豫ICP备17021117号-1</a>
+          <img src="../assets/img/wx.jpg" alt style="width:150px;height:150px;" />
         </div>
       </div>
     </div>
-    <base-waiter></base-waiter>
+    <!-- <base-waiter></base-waiter> -->
   </div>
 </template>
 
 <script>
-import asd from "../components/base-waiter/index";
-import mainMenu from "../components/base-mainmenu/index";
+import asd from '../components/base-waiter/index';
+import mainMenu from '../components/base-mainmenu/index';
 
 export default {
-  data() {
+  data () {
     return {
       menuList: [],
       newsNode: [],
@@ -94,26 +93,26 @@ export default {
     };
   },
   methods: {
-    async getMenu() {
+    async getMenu () {
       const doc = await this.$tools.httpAgent(
-        "/api/tree/main",
-        "post",
-        "pid=1"
+        '/api/tree/main',
+        'post',
+        'pid=1'
       );
       this.menuList = doc.data;
     },
     getNodeList: async function (nodeid) {
-      const sister = await this.$tools.httpAgent("/api/tree/page", "post", {
+      const sister = await this.$tools.httpAgent('/api/tree/page', 'post', {
         pid: nodeid
       });
       return sister.data;
     }
   },
   components: {
-    "base-waiter": asd,
-    "base-mainmenu": mainMenu
+    'base-waiter': asd,
+    'base-mainmenu': mainMenu
   },
-  async mounted() {
+  async mounted () {
     // this.getMenu();
     // this.anliNode = await this.getNodeList(5);
     // this.newsNode = await this.getNodeList(7);
@@ -139,4 +138,3 @@ export default {
   }
 }
 </style>
-

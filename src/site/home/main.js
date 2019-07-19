@@ -65,7 +65,7 @@ const router = new VueRouter({
 // 路由器钩子
 router.beforeEach((to, from, next) => {
   const title = to.meta.title;
-  document.title = title || 'deasy';
+  document.title = title || '';
   next();
 });
 
