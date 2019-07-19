@@ -1,0 +1,7 @@
+<pre><code class="language-js">npm install vue-layer</code></pre><h5 id="-js-">在入口js中引用</h5><pre><code class="language-js">import Vue from &#39;vue&#39;;
+import layer from &#39;vue-layer&#39;
+import &#39;vue-layer/lib/vue-layer.css&#39;;
+
+Vue.prototype.$layer = layer(Vue);</code></pre><h5 id="-">全局配置项</h5><pre><code class="language-js">Vue.prototype.$layer = layer(Vue, {
+    msgtime: 3,//目前只有一项，即msg方法的默认消失时间，单位：秒
+});</code></pre>
