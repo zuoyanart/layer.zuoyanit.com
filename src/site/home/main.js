@@ -55,7 +55,7 @@ Vue.filter('subStr', (value, len = 50, end = '...') => {
 const router = new VueRouter({
   mode: 'history',
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior (to, from, savedPosition) {
     return {
       x: 0,
       y: 0
@@ -65,18 +65,18 @@ const router = new VueRouter({
 // 路由器钩子
 router.beforeEach((to, from, next) => {
   const title = to.meta.title;
-  document.title = title || '';
+  document.title = title || 'vue-layer';
   next();
 });
 
-router.afterEach(function () { // 添加访问统计代码的执行,详见百度统计api
-  // window.document.title = transition.to.title || 'Default page title';
-  window.prerenderReady = false;
-  if (_hmt) {
-    let currentUrl = document.location.href;
-    _hmt.push(['_trackPageview', currentUrl]);
-  }
-});
+// router.afterEach(function () { // 添加访问统计代码的执行,详见百度统计api
+//   // window.document.title = transition.to.title || 'Default page title';
+//   window.prerenderReady = false;
+//   if (_hmt) {
+//     let currentUrl = document.location.href;
+//     _hmt.push(['_trackPageview', currentUrl]);
+//   }
+// });
 
 const app = new Vue({
   el: '#app',
