@@ -85,7 +85,7 @@ export default {
       type: String,
       default: ''
     },
-    layerData: {
+    lydata: {
       type: Object,
       default: () => {
         return {};
@@ -111,8 +111,12 @@ export default {
       // console.log(this.$parent);
       // console.log(this.form);
       // this.$parent.$data.iframeData = JSON.parse(JSON.stringify(this.form));
-      this.$parent.$data.iframeData = Object.assign({}, this.form);
+      // this.$parent.$data.iframeData = Object.assign({}, this.form);
+      // console.log('lydata', this.lydata);
+      // console.log('lydataForm', this.form);
+      this.lydata.iframeData = Object.assign(this.lydata.iframeData, this.form);
       this.$layer.msg('成功');
+      this.$layer.close(this.layerid);
       // this.$parent.$emit('asd', 'kkk');
     },
     quxiao () {
@@ -122,7 +126,7 @@ export default {
   },
   mounted () {
     // this.form.name = this.check.a;
-    console.log(this.layerData);
+    console.log(this.lydata);
   },
   watch: {
     iframeData: {

@@ -1,0 +1,71 @@
+<pre><code class="language-js">import formComp from &#39;./form.vue&#39;;</code></pre><pre><code class="language-js">this.$layer.iframe({
+  content: {
+    content: formComp,
+    parent: this,
+    data: { iframeData: this.iframeData }
+  },
+  area: [&#39;900px&#39;, &#39;600px&#39;],
+  title: &#39;这是一个标题&#39;,
+  maxmin: true,
+  shade: false,
+  shadeClose: false,
+  cancel: () =&gt; { //关闭弹窗事件
+    alert(&#39;关闭iframe&#39;);
+  }
+});</code></pre><h4 id="form-vue">form.vue</h4><pre><code class="language-js">export default {
+  data () {
+    return {
+      form: {
+        name: &#39;&#39;,
+        region: &#39;&#39;,
+        date1: &#39;&#39;,
+        date2: &#39;&#39;,
+        delivery: false,
+        type: [],
+        resource: &#39;&#39;,
+        desc: &#39;&#39;
+      }
+    };
+  },
+  props: {
+    layerid: {//自动注入的layerid
+      type: String,
+      default: &#39;&#39;
+    },
+    iframeData: {//传递的数据
+      type: Object,
+      default: () =&gt; {
+        return {};
+      }
+    },
+    lydata:{
+      type: Object,
+      default: () =&gt; {
+        return {};
+      }
+    }
+  },
+  methods: {
+    onSubmit () {
+      //更新父对象数据信息
+      this.$parent.$data.iframeData = Object.assign({}, this.form);
+      //或者
+      this.lydata.iframeData = Object.assign(this.lydata.iframeData, this.form);
+
+      this.$layer.msg(&#39;成功&#39;);
+      this.$layer.close(this.layerid);
+    },
+    quxiao () {
+      this.$layer.close(this.layerid);
+    }
+  },
+  watch: {
+    iframeData: {
+      handler: function () {
+        this.form = this.iframeData;
+      },
+      deep: true,
+      immediate: true
+    }
+  }
+};</code></pre>

@@ -46,14 +46,23 @@ export default {
       default: () => {
         return {};
       }
+    },
+    lydata:{
+      type: Object,
+      default: () => {
+        return {};
+      }
     }
   },
   methods: {
     onSubmit () {
       //更新父对象数据信息
       this.$parent.$data.iframeData = Object.assign({}, this.form);
-
+      //或者
+      this.lydata.iframeData = Object.assign(this.lydata.iframeData, this.form);
+      
       this.$layer.msg('成功');
+      this.$layer.close(this.layerid);
     },
     quxiao () {
       this.$layer.close(this.layerid);

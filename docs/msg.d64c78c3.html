@@ -1,0 +1,10 @@
+<h4 id="-">基本</h4>
+<pre><code class="language-js"> this.$layer.msg(&#39;弱弱的提示&#39;);</code></pre>
+<h4 id="-">带事件</h4>
+<pre><code class="language-js">this.$layer.msg(&#39;5s后执行&#39;,{
+    time: 5
+  },
+  layerid =&gt; {
+    this.$layer.close(layerid);
+  }
+);</code></pre>
