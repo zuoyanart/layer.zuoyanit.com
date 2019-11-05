@@ -21,7 +21,7 @@
     "superagent": "^5.1.0",
     "vue": "^2.6.10",
     "vue-cute-timeline": "^1.2.8",
-    "vue-layer": "^1.1.3",
+    "vue-layer": "^1.1.5",
     "vue-router": "^3.1.3",
     "vue-ydui": "^1.2.6",
     "vuex": "^3.1.1"

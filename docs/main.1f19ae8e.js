@@ -13239,8 +13239,8 @@ var define;
           I = "Promise",
           z = P.get,
           R = P.set,
-          N = P.getterFor(I),
-          B = l,
+          B = P.getterFor(I),
+          N = l,
           $ = u.TypeError,
           V = u.document,
           F = u.process,
@@ -13259,7 +13259,7 @@ var define;
           tt = 1,
           et = 2,
           nt = C(I, function () {
-        var t = B.resolve(1),
+        var t = N.resolve(1),
             e = function () {},
             n = (t.constructor = {})[M] = function (t) {
           t(e, e);
@@ -13268,7 +13268,7 @@ var define;
         return !((X || "function" == typeof PromiseRejectionEvent) && (!s || t["finally"]) && t.then(e) instanceof n && 0 !== G.indexOf("6.6") && -1 === _.indexOf("Chrome/66"));
       }),
           rt = nt || !w(function (t) {
-        B.all(t)["catch"](function () {});
+        N.all(t)["catch"](function () {});
       }),
           ot = function (t) {
         var e;
@@ -13363,8 +13363,8 @@ var define;
         }
       };
 
-      nt && (B = function (t) {
-        b(this, B, I), y(t), r.call(this);
+      nt && (N = function (t) {
+        b(this, N, I), y(t), r.call(this);
         var e = z(this);
 
         try {
@@ -13383,10 +13383,10 @@ var define;
           state: Z,
           value: void 0
         });
-      }, r.prototype = d(B.prototype, {
+      }, r.prototype = d(N.prototype, {
         then: function (t, e) {
-          var n = N(this),
-              r = W(S(this, B));
+          var n = B(this),
+              r = W(S(this, N));
           return r.ok = "function" != typeof t || t, r.fail = "function" == typeof e && e, r.domain = X ? F.domain : void 0, n.parent = !0, n.reactions.push(r), n.state != Z && it(this, n, !1), r.promise;
         },
         catch: function (t) {
@@ -13397,10 +13397,10 @@ var define;
             e = z(t);
         this.promise = t, this.resolve = ft(pt, t, e), this.reject = ft(lt, t, e);
       }, k.f = W = function (t) {
-        return t === B || t === i ? new o(t) : Y(t);
+        return t === N || t === i ? new o(t) : Y(t);
       }, s || "function" != typeof l || (c = l.prototype.then, p(l.prototype, "then", function (t, e) {
         var n = this;
-        return new B(function (t, e) {
+        return new N(function (t, e) {
           c.call(n, t, e);
         }).then(t, e);
       }, {
@@ -13411,15 +13411,15 @@ var define;
         forced: !0
       }, {
         fetch: function (t) {
-          return j(B, H.apply(u, arguments));
+          return j(N, H.apply(u, arguments));
         }
       }))), a({
         global: !0,
         wrap: !0,
         forced: nt
       }, {
-        Promise: B
-      }), v(B, I, !1, !0), h(I), i = f[I], a({
+        Promise: N
+      }), v(N, I, !1, !0), h(I), i = f[I], a({
         target: I,
         stat: !0,
         forced: nt
@@ -13434,7 +13434,7 @@ var define;
         forced: s || nt
       }, {
         resolve: function (t) {
-          return j(s && this === i ? B : this, t);
+          return j(s && this === i ? N : this, t);
         }
       }), a({
         target: I,
@@ -13956,12 +13956,12 @@ var define;
           I = n("2874"),
           z = n("2f5a"),
           R = n("dee0").forEach,
-          N = L("hidden"),
-          B = "Symbol",
+          B = L("hidden"),
+          N = "Symbol",
           $ = "prototype",
           V = C("toPrimitive"),
           F = z.set,
-          H = z.getterFor(B),
+          H = z.getterFor(N),
           D = Object[$],
           G = o.Symbol,
           W = o.JSON,
@@ -13992,7 +13992,7 @@ var define;
           it = function (t, e) {
         var n = Z[t] = y(G[$]);
         return F(n, {
-          type: B,
+          type: N,
           tag: t,
           description: e
         }), c || (n.description = e), n;
@@ -14005,9 +14005,9 @@ var define;
           at = function (t, e, n) {
         t === D && at(K, e, n), p(t);
         var r = h(e, !0);
-        return p(n), u(Z, r) ? (n.enumerable ? (u(t, N) && t[N][r] && (t[N][r] = !1), n = y(n, {
+        return p(n), u(Z, r) ? (n.enumerable ? (u(t, B) && t[B][r] && (t[B][r] = !1), n = y(n, {
           enumerable: m(0, !1)
-        })) : (u(t, N) || q(t, N, m(1, {})), t[N][r] = !0), ot(t, r, n)) : q(t, r, n);
+        })) : (u(t, B) || q(t, B, m(1, {})), t[B][r] = !0), ot(t, r, n)) : q(t, r, n);
       },
           st = function (t, e) {
         p(t);
@@ -14023,7 +14023,7 @@ var define;
           ft = function (t) {
         var e = h(t, !0),
             n = J.call(this, e);
-        return !(this === D && u(Z, e) && !u(K, e)) && (!(n || !u(this, e) || !u(Z, e) || u(this, N) && this[N][e]) || n);
+        return !(this === D && u(Z, e) && !u(K, e)) && (!(n || !u(this, e) || !u(Z, e) || u(this, B) && this[B][e]) || n);
       },
           lt = function (t, e) {
         var n = v(t),
@@ -14031,7 +14031,7 @@ var define;
 
         if (n !== D || !u(Z, r) || u(K, r)) {
           var o = X(n, r);
-          return !o || !u(Z, r) || u(n, N) && n[N][r] || (o.enumerable = !0), o;
+          return !o || !u(Z, r) || u(n, B) && n[B][r] || (o.enumerable = !0), o;
         }
       },
           pt = function (t) {
@@ -14056,7 +14056,7 @@ var define;
         var t = arguments.length && void 0 !== arguments[0] ? String(arguments[0]) : void 0,
             e = P(t),
             n = function (t) {
-          this === D && n.call(K, t), u(this, N) && u(this[N], e) && (this[N][e] = !1), ot(this, e, m(1, t));
+          this === D && n.call(K, t), u(this, B) && u(this[B], e) && (this[B][e] = !1), ot(this, e, m(1, t));
         };
 
         return c && rt && ot(D, e, {
@@ -14084,7 +14084,7 @@ var define;
       }), R(b(et), function (t) {
         M(t);
       }), r({
-        target: B,
+        target: N,
         stat: !0,
         forced: !a
       }, {
@@ -14153,7 +14153,7 @@ var define;
             if ("function" == typeof n && (e = n.call(this, t, e)), !ct(e)) return e;
           }), r[1] = e, Y.apply(W, r);
         }
-      }), G[$][V] || j(G[$], V, G[$].valueOf), I(G, B), _[N] = !0;
+      }), G[$][V] || j(G[$], V, G[$].valueOf), I(G, N), _[B] = !0;
     },
     "8d05": function (t, e, n) {
       var r = n("9bfb");
@@ -15848,8 +15848,8 @@ var define;
           I = "Promise",
           z = P.get,
           R = P.set,
-          N = P.getterFor(I),
-          B = l,
+          B = P.getterFor(I),
+          N = l,
           $ = u.TypeError,
           V = u.document,
           F = u.process,
@@ -15868,7 +15868,7 @@ var define;
           tt = 1,
           et = 2,
           nt = C(I, function () {
-        var t = B.resolve(1),
+        var t = N.resolve(1),
             e = function () {},
             n = (t.constructor = {})[M] = function (t) {
           t(e, e);
@@ -15877,7 +15877,7 @@ var define;
         return !((X || "function" == typeof PromiseRejectionEvent) && (!s || t["finally"]) && t.then(e) instanceof n && 0 !== G.indexOf("6.6") && -1 === _.indexOf("Chrome/66"));
       }),
           rt = nt || !w(function (t) {
-        B.all(t)["catch"](function () {});
+        N.all(t)["catch"](function () {});
       }),
           ot = function (t) {
         var e;
@@ -15972,8 +15972,8 @@ var define;
         }
       };
 
-      nt && (B = function (t) {
-        b(this, B, I), y(t), r.call(this);
+      nt && (N = function (t) {
+        b(this, N, I), y(t), r.call(this);
         var e = z(this);
 
         try {
@@ -15992,10 +15992,10 @@ var define;
           state: Z,
           value: void 0
         });
-      }, r.prototype = d(B.prototype, {
+      }, r.prototype = d(N.prototype, {
         then: function (t, e) {
-          var n = N(this),
-              r = W(S(this, B));
+          var n = B(this),
+              r = W(S(this, N));
           return r.ok = "function" != typeof t || t, r.fail = "function" == typeof e && e, r.domain = X ? F.domain : void 0, n.parent = !0, n.reactions.push(r), n.state != Z && it(this, n, !1), r.promise;
         },
         catch: function (t) {
@@ -16006,10 +16006,10 @@ var define;
             e = z(t);
         this.promise = t, this.resolve = ft(pt, t, e), this.reject = ft(lt, t, e);
       }, k.f = W = function (t) {
-        return t === B || t === i ? new o(t) : Y(t);
+        return t === N || t === i ? new o(t) : Y(t);
       }, s || "function" != typeof l || (c = l.prototype.then, p(l.prototype, "then", function (t, e) {
         var n = this;
-        return new B(function (t, e) {
+        return new N(function (t, e) {
           c.call(n, t, e);
         }).then(t, e);
       }, {
@@ -16020,15 +16020,15 @@ var define;
         forced: !0
       }, {
         fetch: function (t) {
-          return j(B, H.apply(u, arguments));
+          return j(N, H.apply(u, arguments));
         }
       }))), a({
         global: !0,
         wrap: !0,
         forced: nt
       }, {
-        Promise: B
-      }), v(B, I, !1, !0), h(I), i = f[I], a({
+        Promise: N
+      }), v(N, I, !1, !0), h(I), i = f[I], a({
         target: I,
         stat: !0,
         forced: nt
@@ -16043,7 +16043,7 @@ var define;
         forced: s || nt
       }, {
         resolve: function (t) {
-          return j(s && this === i ? B : this, t);
+          return j(s && this === i ? N : this, t);
         }
       }), a({
         target: I,
@@ -16538,17 +16538,17 @@ var define;
       }
 
       var R = n("85d3"),
-          N = n.n(R);
+          B = n.n(R);
 
-      function B(t, e) {
+      function N(t, e) {
         for (var n = 0; n < e.length; n++) {
           var r = e[n];
-          r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), N()(t, r.key, r);
+          r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), B()(t, r.key, r);
         }
       }
 
       function $(t, e, n) {
-        return e && B(t.prototype, e), n && B(t, n), t;
+        return e && N(t.prototype, e), n && N(t, n), t;
       }
 
       var V = function () {
@@ -17625,7 +17625,7 @@ var define;
           It = Mt,
           zt = (n("3a87"), S(It, f, l, !1, null, null, null)),
           Rt = zt.exports,
-          Nt = function () {
+          Bt = function () {
         var t = this,
             e = t.$createElement,
             n = t._self._c || e;
@@ -17640,7 +17640,7 @@ var define;
           }
         });
       },
-          Bt = [],
+          Nt = [],
           $t = {
         data: function () {
           return {
@@ -17681,7 +17681,7 @@ var define;
         mounted: function () {}
       },
           Vt = $t,
-          Ft = (n("a0bb"), S(Vt, Nt, Bt, !1, null, null, null)),
+          Ft = (n("a0bb"), S(Vt, Bt, Nt, !1, null, null, null)),
           Ht = Ft.exports,
           Dt = function (t) {
         var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
@@ -17739,7 +17739,7 @@ var define;
               var l = new r({
                 data: e
               });
-              l.vm = l.$mount(), document.body.appendChild(l.vm.$el), o.instancesVue[s].mask = l.vm;
+              l.vm = l.$mount(), document.body.insertBefore(l.vm.$el, u.vm.$el), o.instancesVue[s].mask = l.vm;
             }
           }
 
@@ -17819,7 +17819,7 @@ var define;
         }, o.close = function (t) {
           var e = document.getElementById(t);
 
-          if (e) {
+          if (console.log("id", t), e) {
             if (document.body.removeChild(e), delete o.instances[t], o.instancesVue[t].main.$destroy(), "" != o.instancesVue[t].iframe && o.instancesVue[t].iframe.$destroy(), !o.instancesVue[t].main.scrollbar) {
               var n = 0;
 
@@ -81871,7 +81871,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40735" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

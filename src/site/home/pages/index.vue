@@ -195,7 +195,7 @@ export default {
     },
     loadingHandle () {
       this.$layer.loading({
-        time: 30
+        time: 5
       });
     },
     promptHandle () {
